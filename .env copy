@@ -1,0 +1,5 @@
+# .env
+SECRET_KEY=seu-token # Use uma chave forte gerada aleatoriamente!
+HOST=https://seu-endereco.com
+PORT=21465
+DEVICE_NAME=WppConnect
