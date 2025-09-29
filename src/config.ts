@@ -12,7 +12,7 @@ const getEnvOrDefault = (key: string, defaultValue: string): string => {
 
 export default {
   secretKey: getEnvOrDefault('SECRET_KEY', 'THISISMYSECURETOKEN'),
-  host: getEnvOrDefault('HOST', 'http://localhost'),
+  host: getEnvOrDefault('HOST', 'https://localhost'),
   port: getEnvOrDefault('PORT', '21465'),
   deviceName: 'WppConnect',
   poweredBy: 'WPPConnect-Server',
