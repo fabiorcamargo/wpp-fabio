@@ -116,11 +116,11 @@ export default {
     redisPrefix: 'docker',
   },
   aws_s3: {
-    region: 'sa-east-1' as any,
-    access_key_id: null,
-    secret_key: null,
-    defaultBucketName: null,
-    endpoint: null,
-    forcePathStyle: null,
+    region: process.env.AWS_REGION as any,
+    access_key_id: process.env.AWS_ACCESS_KEY_ID,
+    secret_key: process.env.AWS_SECRET_ACCESS_KEY,
+    defaultBucketName: process.env.AWS_BUCKET_NAME,
+    endpoint: process.env.AWS_ENDPOINT,
+    forcePathStyle: true,
   },
 } as unknown as ServerOptions;

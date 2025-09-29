@@ -3,3 +3,9 @@ SECRET_KEY=seu-token # Use uma chave forte gerada aleatoriamente!
 HOST=https://seu-endereco.com
 PORT=21465
 DEVICE_NAME=WppConnect
+
+AWS_REGION=sa-east-1
+AWS_ACCESS_KEY_ID=id
+AWS_SECRET_ACCESS_KEY=key
+AWS_BUCKET_NAME=bucket
+AWS_ENDPOINT=s3.sa-east-1.amazonaws.com
