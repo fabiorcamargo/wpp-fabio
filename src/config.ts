@@ -23,7 +23,7 @@ export default {
   webhook: {
     url: null,
     autoDownload: false,
-    uploadS3: false,
+    uploadS3: true,
     readMessage: false,
     allUnreadOnStart: false,
     listenAcks: false,
