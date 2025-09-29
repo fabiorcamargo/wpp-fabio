@@ -17,7 +17,7 @@ export default {
   deviceName: 'WppConnect',
   poweredBy: 'WPPConnect-Server',
   startAllSession: true,
-  tokenStoreType: 'file',
+  tokenStoreType: 's3',
   maxListeners: 15,
   customUserDataDir: './userDataDir/',
   webhook: {
@@ -38,7 +38,7 @@ export default {
   },
   websocket: {
     autoDownload: false,
-    uploadS3: false,
+    uploadS3: true,
   },
   chatwoot: {
     sendQrCode: true,
