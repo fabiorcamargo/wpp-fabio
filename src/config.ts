@@ -5,7 +5,7 @@ const getEnvOrDefault = (key: string, defaultValue: string): string => {
 };
 
 export default {
-  secretKey: getEnvOrDefault('SECRET_KEY', 'Quem@ma764829'), // Valor padrão como fallback
+  secretKey: getEnvOrDefault('SECRET_KEY', 'THISISMYSECURETOKEN'), // Valor padrão como fallback
   host: getEnvOrDefault('HOST', 'http://localhost'),
   port: getEnvOrDefault('PORT', '21465'), // Já está sendo lido como env no seu docker-compose, mas bom ter fallback aqui também
   deviceName: 'WppConnect',
