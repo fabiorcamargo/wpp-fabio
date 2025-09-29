@@ -1,8 +1,16 @@
 import { ServerOptions } from './types/ServerOptions';
+import * as dotenv from 'dotenv';
+
+// garante que o .env seja lido mesmo se importar config.ts direto
+dotenv.config();
 
 const getEnvOrDefault = (key: string, defaultValue: string): string => {
-  return process.env[key] || defaultValue;
+  const value = process.env[key] || defaultValue;
+  console.log(`[DEBUG] ${key} = ${value}`); // 👈 debug
+  return value;
 };
+
+console.log('SECRET_KEY:', process.env.SECRET_KEY);
 
 export default {
   secretKey: getEnvOrDefault('SECRET_KEY', 'THISISMYSECURETOKEN'),
