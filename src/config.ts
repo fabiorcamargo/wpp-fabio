@@ -11,6 +11,7 @@ const getEnvOrDefault = (key: string, defaultValue: string): string => {
 };
 
 console.log('SECRET_KEY:', process.env.SECRET_KEY);
+console.log('AWS_SECRET_ACCESS_KEY:', process.env.SECRET_KEY);
 
 export default {
   secretKey: getEnvOrDefault('SECRET_KEY', 'THISISMYSECURETOKEN'),
