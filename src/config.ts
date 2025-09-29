@@ -1,13 +1,19 @@
 import { ServerOptions } from './types/ServerOptions';
+import * as dotenv from 'dotenv';
+
+// garante que o .env seja lido mesmo se importar config.ts direto
+dotenv.config();
 
 const getEnvOrDefault = (key: string, defaultValue: string): string => {
-  return process.env[key] || defaultValue;
+  const value = process.env[key] || defaultValue;
+  console.log(`[DEBUG] ${key} = ${value}`); // 👈 debug
+  return value;
 };
 
 export default {
-  secretKey: getEnvOrDefault('SECRET_KEY', 'THISISMYSECURETOKEN'), // Valor padrão como fallback
+  secretKey: getEnvOrDefault('SECRET_KEY', 'THISISMYSECURETOKEN'),
   host: getEnvOrDefault('HOST', 'http://localhost'),
-  port: getEnvOrDefault('PORT', '21465'), // Já está sendo lido como env no seu docker-compose, mas bom ter fallback aqui também
+  port: getEnvOrDefault('PORT', '21465'),
   deviceName: 'WppConnect',
   poweredBy: 'WPPConnect-Server',
   startAllSession: true,
